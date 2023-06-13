@@ -1,0 +1,12 @@
+.dark-background      { background: #1976D2; }
+.default-background   { background: #2196F3; }
+.light-background    { background: #BBDEFB; }
+.text-color     { color: #FFFFFF; }
+.accent-color            { background: #03A9F4; }
+.accent-background { background: #03A9F4; }
+.primary-text-color      { color: #212121; }
+.secondary-text-color    { color: #727272; }
+.divider-color           { border-color: #B6B6B6; }
+.text-blue {
+  color: #9857ff;
+}
