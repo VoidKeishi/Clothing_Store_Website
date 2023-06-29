@@ -1,90 +1,108 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
 
-        .container {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
+.container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
-        li {
-            float: left;
-        }
+li {
+    float: left;
+}
 
-        li a {
-            display: block;
-            color: #fff;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
+li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-        li a:hover {
-            background-color: #111;
-        }
+li a:hover {
+    background-color: #111;
+}
 
-        .main-content {
-            text-align: center;
-            padding: 40px;
-            position: relative;
-            color: #333;
-            overflow: hidden;
-            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('img/main-background.jpg');
-            background-size: cover;
-            background-position: center;
-            animation: fadeBg 10s infinite;
-        }
+#login {
+    float: right;
+    padding-right: 10px;
+    background-color: #ff9a35;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+}
 
-        .main-content h1 {
-            font-size: 36px;
-            color: #bfdec1;
-            margin-bottom: 20px;
-        }
+#login:hover {
+    background-color: #000000;
+}
 
-        .main-content p {
-            font-size: 18px;
-            color: #aed006;
-            margin-bottom: 30px;
-        }
+.main-content {
+    text-align: center;
+    padding: 150px;
+    position: relative;
+    color: #333;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('img/main-background.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: fadeBg 10s infinite;
+}
 
-        .button {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 16px;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
+.main-content h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
 
-        .button:hover {
-            background-color: #111;
-        }
-        .product-section {
-            /* Existing styles for .product-section */
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+.main-content p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-style: italic;
+}
 
-        .product-card {
-            /* Existing styles for .product-card */
-            width: 20%;
-            /* Adjust the width as needed */
-            margin: 25px;
-            /* Add margin for spacing */
-            display: inline-block;
-        }
+.button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #111;
+}
+.product-section {
+    /* Existing styles for .product-section */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    /* Existing styles for .product-card */
+    width: 20%;
+    /* Adjust the width as needed */
+    margin: 10px;
+    /* Add margin for spacing */
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
