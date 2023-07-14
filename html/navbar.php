@@ -2,8 +2,8 @@
     <div id="header-left">
     <ul>
         <li>
-            <a href="..//html/index.html" class="name" style="position: relative; margin-left: 25px">
-                <img src="..//img/Logo.svg" alt="Logo" id="logo-img" />
+            <a href="../html/home.php" class="name" style="position: relative; margin-left: 25px">
+                <img src="../img/Logo.svg" alt="Logo" id="logo-img" />
             </a>
         </li>
         <div style="width: 50px; display: inline-block"></div>
@@ -236,7 +236,7 @@
             <a href=""><i class="bi bi-bag-heart"></i></a>
         </li>
         <li>
-            <a href="..//html/login.html"><i class="bi bi-file-person"></i></a>
+            <a href="../html/login.php"><i class="bi bi-file-person"></i></a>
         </li>
     </ul>
 </div>
@@ -250,7 +250,7 @@
                 </label>
             </form>
         </div>
-        <a href="..//html/search.html" style="display: inline-block; margin-left: 16px">
+        <a href="../html/search.php" style="display: inline-block; margin-left: 16px">
             <button type="submit" id="search-button" title="Tìm kiếm">
                 <i class="bi bi-search" id="search-button-icon"></i>
             </button>

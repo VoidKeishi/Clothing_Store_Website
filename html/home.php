@@ -12,7 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <link href="https://fonts.gstatic.com" rel="preconnect" />
-    <link rel="stylesheet" href="..//css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Shop</title>
   </head>
   <body>
@@ -34,7 +34,7 @@
               <div class="slider-div-img">
                 <img
                   class="slider-img"
-                  src="..//img/chongNang.png"
+                  src="../img/chongNang.png"
                   alt="Phụ kiện chống nắng"
                   style="position: relative; z-index: 2"
                 />
@@ -44,7 +44,7 @@
                   <div class="banner-logo">
                     <div class="logo">
                       <img
-                        src="..//img/uvProtection.png"
+                        src="../img/uvProtection.png"
                         alt="Logo"
                         width="100%"
                       />
@@ -67,7 +67,7 @@
               <div class="slider-div-img">
                 <img
                   class="slider-img"
-                  src="..//img/AoThun.png"
+                  src="../img/AoThun.png"
                   alt="Áo Thun"
                 />
               </div>
@@ -95,7 +95,7 @@
               <div class="slider-div-img">
                 <img
                   class="slider-img"
-                  src="..//img/QuanShort.png"
+                  src="../img/QuanShort.png"
                   alt="Quần Short"
                 />
               </div>
@@ -215,6 +215,6 @@
         <div class="clear" style="clear: both"></div>
       </div>
     </footer>
-    <script src="..//js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

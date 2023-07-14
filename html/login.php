@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
+      <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -29,9 +25,9 @@
                 <div class="col-lg-6">
                   <div class="card-body p-md-5 mx-md-4">
                     <div class="text-center">
-                      <a href="..//html/index.html">
+                      <a href="../html/home.php">
                         <img
-                          src="..//img/Logo.svg"
+                          src="../img/Logo.svg"
                           style="width: 185px"
                           alt="logo"
                         />
@@ -46,10 +42,10 @@
                         <input
                           type="email"
                           id="form2Example11"
-                          class="form-control"
+                          class="form-control login-input"
                           placeholder="Phone number or email address"
                         />
-                        <label class="form-label" for="form2Example11"
+                        <label class="form-label lable-input" for="form2Example11"
                           >Username</label
                         >
                       </div>
@@ -58,9 +54,9 @@
                         <input
                           type="password"
                           id="form2Example22"
-                          class="form-control"
+                          class="form-control login-input"
                         />
-                        <label class="form-label" for="form2Example22"
+                        <label class="form-label lable-input" for="form2Example22"
                           >Password</label
                         >
                       </div>
@@ -78,7 +74,7 @@
                         </button>
                         <a
                           class="text-muted"
-                          href="..//html/ForgotPassword.html"
+                          href="../html/ForgotPassword.php"
                           >Forgot password?</a
                         >
                       </div>
@@ -87,9 +83,11 @@
                         class="d-flex align-items-center justify-content-center pb-4"
                       >
                         <p class="mb-0 me-2">Don't have an account?</p>
-                        <button type="button" class="btn btn-outline-danger">
-                          Create new
-                        </button>
+                        <a href="../html/signUp.php">
+                          <button type="button" class="btn btn-outline-danger">
+                            Create new
+                          </button>
+                        </a>
                       </div>
                     </form>
                   </div>
@@ -98,7 +96,7 @@
                   class="col-lg-6 d-flex align-items-center gradient-custom-2"
                 >
                   <img
-                    src="https://i.pinimg.com/736x/c4/97/80/c49780bd68d49f68b03acaab844a3325.jpg"
+                    src="../img/login.png"
                     alt=""
                     style="width: 100%; height: 595px"
                   />
@@ -109,5 +107,6 @@
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
   </body>
 </html>
