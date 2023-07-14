@@ -233,7 +233,7 @@
             <a href=""><i class="bi bi-heart"></i></a>
         </li>
         <li>
-            <a href=""><i class="bi bi-bag-heart"></i></a>
+            <a href="../html/shoppingCard.php"><i class="bi bi-bag-heart"></i></a>
         </li>
         <li>
             <a href="../html/login.php"><i class="bi bi-file-person"></i></a>
