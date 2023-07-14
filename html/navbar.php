@@ -32,7 +32,6 @@
                             <ul>
                                 <li><a href="">Tất cả quần</a></li>
                                 <li><a href="">Quần Jean</a></li>
-                                <li><a href="">Quần dài</a></li>
                                 <li><a href="">Quần tây</a></li>
                                 <li><a href="">Quần short</a></li>
                                 <li><a href="">Quần nỉ</a></li>
@@ -55,7 +54,6 @@
                             </div>
                             <ul>
                                 <li><a href="">Tất cả đồ mặc trong</a></li>
-                                <li><a href="">Áo mặc trong</a></li>
                                 <li><a href="">Bra Tops</a></li>
                                 <li><a href="">Đồ lót</a></li>
                                 <li><a href="">Đồ giữ nhiệt</a></li>
@@ -95,8 +93,6 @@
                                 <li><a href="">Áo Thun</a></li>
                                 <li><a href="">Áo sơ mi</a></li>
                                 <li><a href="">Áo nỉ & Hoodie</a></li>
-                                <li><a href="">Áo Polo</a></li>
-                                <li><a href="">Áo len</a></li>
                             </ul>
                         </div>
                         <div class="flyout-col">
@@ -129,7 +125,6 @@
                             </div>
                             <ul>
                                 <li><a href="">Tất cả đồ mặc trong</a></li>
-                                <li><a href="">Áo mặc trong</a></li>
                                 <li><a href="">Đồ giữ nhiệt</a></li>
                                 <li><a href="">Đồ lót</a></li>
                             </ul>
