@@ -47,6 +47,8 @@
   <header>
     <?php include 'navbar.php' ?>
   </header>
+
+
   <section class="h-100 h-custom" style="background-color: #eee; margin-top: 87px">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -279,6 +281,8 @@
         </div>
       </div>
   </section>
+
+  
   <footer>
     <?php include 'footer.php' ?>
   </footer>
