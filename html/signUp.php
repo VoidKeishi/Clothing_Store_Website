@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <section class="vh-100" style="background-color: #eee;">
+    <section class="vh-100" style="background-color: #eee; height: 120vh !important;">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-lg-12 col-xl-11">
@@ -47,10 +47,34 @@
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-phone-alt fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="form3Example1c" name="userNumber" class="form-control" />
+                                                <label class="form-label" for="form3Example1c">Your Number</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <input type="email" id="form3Example3c" name="userEmail" class="form-control" />
                                                 <label class="form-label" for="form3Example3c">Your Email</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-calendar-alt fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="date" id="form3Example3c" name="userBirthday" class="form-control" />
+                                                <label class="form-label" for="form3Example3c">Your Birthday</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-venus-mars fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="form3Example3c" name="userGender" class="form-control" />
+                                                <label class="form-label" for="form3Example3c">Your Gender</label>
                                             </div>
                                         </div>
 
@@ -86,7 +110,7 @@
                                 </div>
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                    <img src="../img/signUp.png" class="img-fluid" alt="Sample image" style="height: 100%;">
+                                    <img src="../img/signUp.png" class="img-fluid" alt="Sample image" style="width: 100%;">
 
                                 </div>
                             </div>
