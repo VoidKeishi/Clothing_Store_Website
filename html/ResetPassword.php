@@ -15,22 +15,31 @@ $conn = sqlsrv_connect($serverName, $connection);
 if (!$conn) {
     exit();
 }
+$userEmail = $_COOKIE['userEmail'];
+$userNewPassword = '';
+$userConfirmPassword = '';
+$errorMissing = '';
+$errorNotMatched = '';
+// require_once 'StoredUserInfo.php';
 
-$userEmail = "";
-$error = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $userNewPassword = $_POST['userNewPassword'];
+    $userConfirmPassword = $_POST['userConfirmPassword'];
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $userEmail = $_POST["userEmail"];
-
-    $query = "SELECT Email FROM dbo.CUSTOMERS WHERE Email = ?";
-    $params = array($userEmail);
-    $startQuery = sqlsrv_query($conn, $query, $params);
-    $obj = sqlsrv_fetch_array($startQuery);
-    if($obj) {
-        setcookie('userEmail', $userEmail);
-        header("Location: ResetPassword.php");
+    if(empty($userNewPassword || empty($userConfirmPassword)))
+    {
+        $errorMissing = 'Please fill in the fields !';
+    } else if ($userConfirmPassword !== $userNewPassword) {
+        $errorNotMatched = 'Confirm password does not matched!';
     } else {
-        $error = "Email doesn't exits";
+        $query = 'UPDATE dbo.CUSTOMERS SET Pword = ? WHERE Email = ?';
+        $params = array($userNewPassword, $userEmail);
+        $startQuery = sqlsrv_query($conn, $query, $params);
+        if($startQuery === false) {
+            die( print_r( sqlsrv_errors(), true));
+        } else {
+            header("Location: login.php");
+        }
     }
 }
 
@@ -66,27 +75,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
                                     <div class="text-center">
-                                        <h4 class="mt-1 mb-5 pb-1" style="font-weight: 450; margin-bottom: 20px !important;">Forgot Your password?</h4>
-                                        <p>We get it, stuff happens. Just enter your email address below
-                                            and we'll send you a link to reset your password!</p>
-                                        <p><?php if($error) echo $error; ?></p>
+                                        <h4 class="mt-1 mb-5 pb-1" style="font-weight: 450; margin-bottom: 20px !important;">Reset your password</h4>
+                                        <p><?php if($errorMissing) echo $errorMissing; ?></p>
                                     </div>
 
                                     <form method="post">
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form2Example11" class="form-control" name="userEmail" placeholder="Phone number or email address" />
-                                            <label class="form-label" for="form2Example11">Email</label>
+                                            <input type="password" id="form2Example11" class="form-control" name="userNewPassword"/>
+                                            <label class="form-label" for="form2Example11">New Password</label>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="form2Example11" class="form-control" name="userConfirmPassword"/>
+                                            <label class="form-label" for="form2Example11">Confirm Password</label>
                                         </div>
                                         <div class="text-center pt-1 mb-5 pb-1" style="margin-bottom: 20px !important;">
                                             <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" style="background-color: rgb(77, 77, 77); 
                                                     border: 1px solid #535353;
-                                                    text-transform: none;">Confirm</button>
+                                                    text-transform: none;">Reset password</button>
                                         </div>
-
+                                        <p><?php if($errorNotMatched) echo $errorNotMatched; ?></p>
                                         <div class="d-flex align-items-center justify-content-center pb-4">
                                             <p class="mb-0 me-2">Don't have an account?</p>
                                             <a href="../html/signUp.php">
-                                                <button type="submit" class="btn btn-outline-danger">Create new</button>
+                                                <button type="button" class="btn btn-outline-danger">Create new</button>
                                             </a>
 
                                         </div>
