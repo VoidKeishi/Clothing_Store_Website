@@ -16,9 +16,12 @@
     <title>Shop</title>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <?php include 'navbar.php' ?>
     </header>
+
+    <!-- Slider -->
     <div id="slider">
       <div id="slider-all" style="width: 100%">
         <i class="bi bi-chevron-right slider-next slider-move"></i>
@@ -123,6 +126,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Content -->
     <div id="content">
       <div id="content-index1">
         <div id="content1-header">
@@ -147,7 +152,10 @@
             </ul>
           </div>
         </div>
-        <div class="productList"></div>
+        <div class="productList">
+          <!-- Lay du lieu tu ben Database roi trai het ra day -->
+        </div>
+        
       </div>
       <div id="content-index2" style="position: relative">
         <div id="content-index2-frame" class="contained">
@@ -159,6 +167,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
     <footer>
       <?php include 'footer.php' ?>
     </footer>
