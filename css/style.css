@@ -477,7 +477,16 @@ header ul li:hover a .green-underline-text {
 }
 
 .productList {
-    height: 300px;
+    
+}
+
+.productList .list-row {
+    float: left;
+    width: 25%;
+}
+
+.productList .list-row .list-item .content-img {
+    width: 100%;
 }
 
 #content-index2 {
@@ -608,5 +617,7 @@ footer {
     color: rgb(37, 42, 43);
     opacity: 0.85;
 }
+
+
 
 /* END OF FOOTER */

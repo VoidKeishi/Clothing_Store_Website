@@ -18,7 +18,7 @@
                                 <span class="flyout-col-header">Áo</span>
                             </div>
                             <ul>
-                                <li><a href="">Tất cả áo</a></li>
+                                <li><a href="/html/">Tất cả áo</a></li>
                                 <li><a href="">Áo Thun</a></li>
                                 <li><a href="">Áo sơ mi</a></li>
                                 <li><a href="">Áo nỉ & Hoodie</a></li>
