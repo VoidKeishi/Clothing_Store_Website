@@ -13,6 +13,7 @@
     />
     <link href="https://fonts.gstatic.com" rel="preconnect" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/exampledisplay.css" />
     <title>Shop</title>
   </head>
   <body>
@@ -152,11 +153,37 @@
             </ul>
           </div>
         </div>
-        <div class="productList">
-          <!-- Lay du lieu tu ben Database roi trai het ra day -->
+
+        <!-- Display -->
+        <div class="productList" id="displayexample">
+          <div class="product-item">
+            <img src="../img/Example/áo gile len đen.jpg" alt="Product 1" />
+            <h3>Áo gile len đen</h3>
+            <span class="product-price">$19.99</span>
+            <a href="#" class="fr-btn-secondary">Buy Now</a>
+          </div>
+          <div class="product-item">
+            <img src="../img/Example/áo khoác da lộn xámm.jpg" alt="Product 1" />
+            <h3>Áo khoác da lộn xám</h3>
+            <span class="product-price">$14.99</span>
+            <a href="#" class="fr-btn-secondary">Buy Now</a>
+          </div>
+          <div class="product-item">
+            <img src="../img/Example/áo len nâu.jpg" alt="Product 1" />
+            <h3>Áo len nâu</h3>
+            <span class="product-price">$16.99</span>
+            <a href="#" class="fr-btn-secondary">Buy Now</a>
+          </div> 
+          <div class="product-item">
+            <img src="../img/Example/quần âu be.jpg" alt="Product 1" />
+            <h3>Quần âu be</h3>
+            <span class="product-price">$17.99</span>
+            <a href="#" class="fr-btn-secondary">Buy Now</a>
+          </div>                
         </div>
-        
       </div>
+      <!-- End display -->
+
       <div id="content-index2" style="position: relative">
         <div id="content-index2-frame" class="contained">
           <span id="span1">TRỞ THÀNH HỘI VIÊN & HƯỞNG ƯU ĐÃI 15%</span>
