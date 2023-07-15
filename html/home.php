@@ -132,73 +132,65 @@
                     </ul>
                 </div>
             </div>
-            <div class="productList">
-                <!-- Lay du lieu tu ben Database roi trai het ra day -->
-                <div class="list-row">
-                    <div class="list-item">
-                        <p class="content">Hello World</p>
-                        <img class="content-img" src="../img/AoThun.png" alt="Quan Ao">
-                    </div>
-                    <div class="list-item">
-                        <p class="content">Hello World</p>
-                        <img class="content-img" src="../img/AoThun.png" alt="Quan Ao">
-                    </div>
-                    <div class="list-item">
-                        <p class="content">Hello World</p>
-                        <img class="content-img" src="../img/AoThun.png" alt="Quan Ao">
-                    </div>
-                    <div class="list-item">
-                        <p class="content">Hello World</p>
-                        <img class="content-img" src="../img/AoThun.png" alt="Quan Ao">
-                    </div>
-                </div>
+
+            <div class="productList" id="displayexample">
+                <?php
+                    $serverName = "MSI\SQLEXPRESS";
+                    $database = "ClothingStore";
+                    $uid = "";
+                    $pass = "";
+                    
+                    $connection = [
+                        "Database" => $database,
+                        "Uid" => $uid,
+                        "PWD" => $pass,
+                        "CharacterSet" => "UTF-8"
+                    ];
+                    
+                    $conn = sqlsrv_connect($serverName, $connection);
+                    
+                    if (!$conn) {
+                        exit();
+                    }
+
+                    $query = "SELECT * FROM dbo.PRODUCTS";
+                    $startQuery = sqlsrv_query($conn, $query);
+                    if ($startQuery) {
+                        while($obj = sqlsrv_fetch_array($startQuery, SQLSRV_FETCH_ASSOC)) {
+                            $imgLink = $obj['Imglink'];
+                            $productName = $obj['NamePro'];
+                            $productPrice = $obj['Price'];
+                            $text = <<<TEXT
+                            <div class="product-item">
+                                <img src="$imgLink" alt="Product 1" />
+                                <h3>$productName</h3>
+                                <span class="product-price">$$productPrice</span>
+                                <a href="#" class="fr-btn-secondary">Buy Now</a>
+                            </div>
+                            TEXT;
+                            echo $text;
+                        }
+                    }
+                ?>
             </div>
         </div>
 
-        <div class="productList" id="displayexample">
-          <div class="product-item">
-            <img src="../img/Example/áo gile len đen.jpg" alt="Product 1" />
-            <h3>Áo gile len đen</h3>
-            <span class="product-price">$19.99</span>
-            <a href="#" class="fr-btn-secondary">Buy Now</a>
-          </div>
-          <div class="product-item">
-            <img src="../img/Example/áo khoác da lộn xámm.jpg" alt="Product 1" />
-            <h3>Áo khoác da lộn xám</h3>
-            <span class="product-price">$14.99</span>
-            <a href="#" class="fr-btn-secondary">Buy Now</a>
-          </div>
-          <div class="product-item">
-            <img src="../img/Example/áo len nâu.jpg" alt="Product 1" />
-            <h3>Áo len nâu</h3>
-            <span class="product-price">$16.99</span>
-            <a href="#" class="fr-btn-secondary">Buy Now</a>
-          </div> 
-          <div class="product-item">
-            <img src="../img/Example/quần âu be.jpg" alt="Product 1" />
-            <h3>Quần âu be</h3>
-            <span class="product-price">$17.99</span>
-            <a href="#" class="fr-btn-secondary">Buy Now</a>
-          </div>                
-        </div>
-      </div>
 
-
-      <div id="content-index2" style="position: relative">
-        <div id="content-index2-frame" class="contained">
-          <span id="span1">TRỞ THÀNH HỘI VIÊN & HƯỞNG ƯU ĐÃI 15%</span>
-          <a href="" id="a2">
-            <span>Đăng ký miễn phí</span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
+        <div id="content-index2" style="position: relative">
+            <div id="content-index2-frame" class="contained">
+                <span id="span1">TRỞ THÀNH HỘI VIÊN & HƯỞNG ƯU ĐÃI 15%</span>
+                <a href="" id="a2">
+                    <span>Đăng ký miễn phí</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Footer -->
-    <!-- <footer>
-        
-    </footer> -->
+    <footer>
+        <?php include 'footer.php'; ?>
+    </footer>
     <script src="../js/main.js"></script>
 </body>
 
