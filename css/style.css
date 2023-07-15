@@ -476,19 +476,6 @@ header ul li:hover a .green-underline-text {
     cursor: pointer;
 }
 
-.productList {
-    
-}
-
-.productList .list-row {
-    float: left;
-    width: 25%;
-}
-
-.productList .list-row .list-item .content-img {
-    width: 100%;
-}
-
 #content-index2 {
     width: 100%;
     height: 130px;
