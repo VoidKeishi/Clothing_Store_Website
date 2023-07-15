@@ -1,6 +1,66 @@
 <?php
 
+$serverName = "MSI\SQLEXPRESS";
+$database = "ClothingStore";
+$uid = "";
+$pass = "";
 
+$connection = [
+    "Database" => $database,
+    "Uid" => $uid,
+    "PWD" => $pass,
+    "CharacterSet" => "UTF-8"
+];
+
+$conn = sqlsrv_connect($serverName, $connection);
+
+if (!$conn) {
+    exit();
+}
+
+$userNationalID = '';
+$userName = '';
+$userDisplayName = '';
+$userPhoneNumber = '';
+$userEmail = '';
+$userBirthday = '';
+$userGender = '';
+$userPassword = '';
+$confirmPassword = '';
+
+$error = "";
+$passwordError = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $userNationalID = $_POST["userNationalID"];
+    $userName = $_POST["userName"];
+    $userDisplayName = $_POST["userDisplayName"];
+    $userPhoneNumber = $_POST["userPhoneNumber"];
+    $userEmail = $_POST["userEmail"];
+    $userBirthday = $_POST["userBirthday"];
+    $userGender = $_POST["userGender"];
+    $userPassword = $_POST["userPassword"];
+    $confirmPassword = $_POST["confirmPassword"];
+
+    if(empty($userNationalID) || empty($userName) || empty($userDisplayName) || empty($userPhoneNumber) || empty($userEmail) || empty($userBirthday) || empty($userGender) || 
+       empty($userPassword) || empty($confirmPassword)) {
+            $error = "Please fill all field !";
+    } else {
+        if ($userPassword !== $confirmPassword) {
+            $passwordError = "Confirm Password is not matched !";
+        }
+        else {
+            $query = "INSERT INTO [CUSTOMERS]([NationalID], [NameCus], [Username], [Pword], [Email], [PhoneNumber], [DOB], [Sex]) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+            $params = array($userNationalID, $userName, $userDisplayName, $userPassword, $userEmail, $userPhoneNumber, $userBirthday, $userGender);
+            $startQuery = sqlsrv_query($conn, $query, $params);
+            if($startQuery === false) {
+                die( print_r( sqlsrv_errors(), true));
+            } else {
+                header("Location: login.php");
+            }
+        }
+    }
+}
 
 ?>
 
@@ -36,7 +96,16 @@
                                     </div>
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                                    <form class="mx-1 mx-md-4">
+                                    <p><?php if($error) echo $error; ?></p>
+                                    <form method="post" class="mx-1 mx-md-4">
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="form3Example1c" name="userNationalID" class="form-control" />
+                                                <label class="form-label" for="form3Example1c">National ID</label>
+                                            </div>
+                                        </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
@@ -47,10 +116,18 @@
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="text" id="form3Example1c" name="userDisplayName" class="form-control" />
+                                                <label class="form-label" for="form3Example1c">Your User Name</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-phone-alt fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="text" id="form3Example1c" name="userNumber" class="form-control" />
-                                                <label class="form-label" for="form3Example1c">Your Number</label>
+                                                <input type="text" id="form3Example1c" name="userPhoneNumber" class="form-control" />
+                                                <label class="form-label" for="form3Example1c">Phone Number</label>
                                             </div>
                                         </div>
 
@@ -86,10 +163,11 @@
                                             </div>
                                         </div>
 
+                                        <p><?php if($passwordError) echo $passwordError; ?></p>
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="password" id="form3Example4cd" class="form-control" />
+                                                <input type="password" id="form3Example4cd" name="confirmPassword" class="form-control" />
                                                 <label class="form-label" for="form3Example4cd">Repeat your password</label>
                                             </div>
                                         </div>
@@ -102,7 +180,7 @@
                                         </div>
 
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="button" class="btn btn-primary btn-lg">Register</button>
+                                            <button type="submit" class="btn btn-primary btn-lg">Register</button>
                                         </div>
 
                                     </form>
