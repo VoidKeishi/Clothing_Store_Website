@@ -89,10 +89,10 @@
                                 <span class="flyout-col-header">Áo</span>
                             </div>
                             <ul>
-                                <li><a href="">Tất cả áo</a></li>
-                                <li><a href="">Áo Thun</a></li>
-                                <li><a href="">Áo sơ mi</a></li>
-                                <li><a href="">Áo nỉ & Hoodie</a></li>
+                                <li><a href="../html/allCategoryProducts.php?type=nam-all">Tất cả áo</a></li>
+                                <li><a href="../html/allCategoryProducts.php?type=nam-ao-thun">Áo Thun</a></li>
+                                <li><a href="../html/allCategoryProducts.php?type=nam-ao-so-mi">Áo sơ mi</a></li>
+                                <li><a href="../html/allCategoryProducts.php?type=nam-ao-ni-hooodie">Áo nỉ & Hoodie</a></li>
                             </ul>
                         </div>
                         <div class="flyout-col">
