@@ -1,0 +1,143 @@
+#oder-frame {
+    width: 100%;
+    background-color: #eee;
+}
+
+#oder-container {
+    width: 800px;
+    padding: 48px 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#card {
+    box-shadow: 0 1px 3px rgba(17,24,39,.09);
+    border: 0;
+    border-radius: 8px;
+    display: flex;
+    background-color: white;
+}
+
+#card-body {
+    padding: 24px;
+    width: 100%;
+}
+
+#h4-header {
+    font-family: "Inter","sans-serif";
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 18px;
+    color: rgb(30, 41, 59);
+}
+
+#p-header {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    color: rgb(100, 116, 139);
+    line-height: 22.4px;
+}
+
+.product-container {
+    margin-bottom: 56px;
+}
+
+.oder-detail {
+    display: flex;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 0.8px solid rgb(226, 232, 240);
+}
+
+.detail-left {
+    display: flex;
+}
+
+.detail-right {
+    display: flex;
+    margin-left: auto;
+    align-items: end;
+    color: rgb(30, 41, 59);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.oder-code {
+    color: rgb(30, 41, 59);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+.oder-date {
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: rgb(100, 116, 139);
+    font-weight: 400;
+}
+
+.product-row {
+    display: flex;
+}
+
+.product-frame {
+    padding: 0 12px;
+}
+
+.product-flex {
+    display: flex;
+}
+
+.product-detail {
+    margin-left: 24px;
+}
+
+.product-header {
+    margin: 0 0 15px 0;
+    color: rgb(30, 41, 59);
+    line-height: 21px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.product-kind {
+    color: rgb(100, 116, 139);
+}
+
+.product-price {
+    margin-top: 40px;
+}
+
+.price {
+    color: rgb(30, 41, 59);
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.product-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.product-link {
+    padding: 8px 16px;
+    background-color: rgb(255, 114, 114);
+    border-radius: 6px;
+    border: 0.8px solid rgb(255, 114, 114);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.product-hr {
+    opacity: 0.2;
+    margin: 16px 0;
+}
