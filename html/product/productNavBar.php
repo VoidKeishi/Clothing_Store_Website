@@ -2,8 +2,8 @@
     <div id="header-left">
     <ul>
         <li>
-            <a href="../html/home.php" class="name" style="position: relative; margin-left: 25px">
-                <img src="../img/Logo.svg" alt="Logo" id="logo-img" />
+            <a href="../../html/home.php" class="name" style="position: relative; margin-left: 25px">
+                <img src="../../img/Logo.svg" alt="Logo" id="logo-img" />
             </a>
         </li>
         <div style="width: 50px; display: inline-block"></div>
@@ -89,10 +89,10 @@
                                 <span class="flyout-col-header">Áo</span>
                             </div>
                             <ul>
-                                <li><a href="../html/allCategoryProducts.php?type=nam-all">Tất cả áo</a></li>
-                                <li><a href="../html/allCategoryProducts.php?type=nam-ao-thun">Áo Thun</a></li>
-                                <li><a href="../html/allCategoryProducts.php?type=nam-ao-so-mi">Áo sơ mi</a></li>
-                                <li><a href="../html/allCategoryProducts.php?type=nam-ao-ni-hooodie">Áo nỉ & Hoodie</a></li>
+                                <li><a href="">Tất cả áo</a></li>
+                                <li><a href="">Áo Thun</a></li>
+                                <li><a href="">Áo sơ mi</a></li>
+                                <li><a href="">Áo nỉ & Hoodie</a></li>
                             </ul>
                         </div>
                         <div class="flyout-col">
@@ -228,10 +228,10 @@
             <a href=""><i class="bi bi-heart"></i></a>
         </li>
         <li>
-            <a href="../html/shoppingCard.php"><i class="bi bi-bag-heart"></i></a>
+            <a href="../shoppingCard.php"><i class="bi bi-bag-heart"></i></a>
         </li>
         <li>
-            <a href="../html/login.php"><i class="bi bi-file-person"></i></a>
+            <a href="../login.php"><i class="bi bi-file-person"></i></a>
         </li>
     </ul>
 </div>

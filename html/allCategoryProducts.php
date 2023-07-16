@@ -1,3 +1,24 @@
+<?php
+
+$serverName = "MSI\SQLEXPRESS";
+$database = "ClothingStore";
+$uid = "";
+$pass = "";
+
+$connection = [
+    "Database" => $database,
+    "Uid" => $uid,
+    "PWD" => $pass,
+    "CharacterSet" => "UTF-8"
+];
+
+$conn = sqlsrv_connect($serverName, $connection);
+
+if (!$conn) {
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,38 +157,36 @@
             <!-- Display -->
             <div class="productList" id="displayexample">
                 <?php
-                $serverName = "MSI\SQLEXPRESS";
-                $database = "ClothingStore";
-                $uid = "";
-                $pass = "";
-
-                $connection = [
-                    "Database" => $database,
-                    "Uid" => $uid,
-                    "PWD" => $pass,
-                    "CharacterSet" => "UTF-8"
-                ];
-
-                $conn = sqlsrv_connect($serverName, $connection);
-
-                if (!$conn) {
-                    exit();
+                $query = "";
+                $startQuery;
+                
+                $type = isset($_GET['type']) ? $_GET['type'] : "";
+                
+                if ($type === "nam-all") {
+                    $query = "SELECT * FROM dbo.PRODUCTS WHERE Subjectt='Nam'";
+                    $startQuery = sqlsrv_query($conn, $query);
+                } else if ($type === "nam-ao-thun") {
+                    $query = "SELECT * FROM dbo.PRODUCTS WHERE Subjectt='Nam' AND Category='Áo Thun'";
+                    $startQuery = sqlsrv_query($conn, $query);
+                } else if ($type === "nam-ao-so-mi") {
+                    $query = "SELECT * FROM dbo.PRODUCTS WHERE Subjectt='Nam' AND Category='Áo Sơ Mi'";
+                    $startQuery = sqlsrv_query($conn, $query);
+                } else if ($type === "nam-ao-ni-hooodie") {
+                    $query = "SELECT * FROM dbo.PRODUCTS WHERE Subjectt='Nam' AND Category='Hoddie'";
+                    $startQuery = sqlsrv_query($conn, $query);
                 }
 
-                $query = "SELECT * FROM dbo.PRODUCTS";
-                $startQuery = sqlsrv_query($conn, $query);
                 if ($startQuery) {
                     while ($obj = sqlsrv_fetch_array($startQuery, SQLSRV_FETCH_ASSOC)) {
                         $imgLink = $obj['Imglink'];
                         $productName = $obj['NamePro'];
                         $productPrice = $obj['Price'];
-                        $productID = $obj['ProductID'];
                         $text = <<<TEXT
                             <div class="product-item">
                                 <img src="$imgLink" alt="Product 1" />
                                 <h3>$productName</h3>
                                 <span class="product-price">$$productPrice</span>
-                                <a href="./product/productDetail.php?id=$productID" class="fr-btn-secondary">Buy Now</a>
+                                <a href="#" class="fr-btn-secondary">Buy Now</a>
                             </div>
                             TEXT;
                         echo $text;
