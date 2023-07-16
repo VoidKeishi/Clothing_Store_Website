@@ -1,0 +1,40 @@
+#frame {
+    position: relative;
+    width: 100%;
+}
+
+#content {
+    margin-left: 300px;
+
+}
+
+#frame-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#main-content {
+    width: 70%;
+}
+
+table input {
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#save-button {
+    background-color: #ff5b5b;
+    color: #fbfbfb;
+    border: 2px solid #ff5b5b;
+    border-radius: 6px;
+    margin-left: auto;
+}
+
+#main-content .delete-button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: red;
+}
